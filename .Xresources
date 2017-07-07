@@ -1,104 +1,86 @@
-!-------------------------------------------
-! XFT Settings gre
-     
-Xft.antialias:  true 
-Xft.autohint:   false 
-Xft.dpi:        96
-Xft.hinting:    true 
-Xft.hintstyle:  hintfull 
-Xft.lcdfilter:  lcddefault
-Xft.rgba:       rgb
+#if __has_include(".extend.Xresources")
+#include ".extend.Xresources"
+#endif
 
-!-------------------------------------------
-! URXVT - Settings
+! ^ The above lines are no comments!
+! Leave them as they are if a file ~/.extend.Xresources is being used on your system.
+! config can be added there or also here below.
+! For comments use "!"
 
-URxvt*depth:                        32
-URxvt*internalBorder:               3
-URxvt*dynamicColors:                on
-URxvt*urgentOnBell:                 true
-URxvt*borderLess:                   false
-URxvt*scrollBar:                    false
-URxvt*cursorBlink:                  true
-URxvt*cursorUnderline:              true
-URxvt*cursorColor:                  #737077
-URxvt*scrollColor:                  #151515
-URxvt*underlineURLs:                true
+.font: xft:FuraCode Nerd Font:pixelsize=9:weight=regular;0
 
-URxvt*font: -*-dina-medium-r-*-*-*-90-*-*-*-*-*-*
-URxvt*italic: -*-dina-medium-*-*-*-*-90-*-*-*-*-*-*
-URxvt*boldFont: -*-dina-bold-r-*-*-*-90-*-*-*-*-*-*
- 
-!--------------------------------------------
-! URxvt Colors
+Xft.dpi:                        96
+Xft.antialias:                  1
+Xft.autohint:                   1
+Xft.hinting:                    1
+Xft.hintstyle:                  hintslight
+Xft.lcdfilter:                  lcdlight
+Xft.rgba:                       rgb
 
-URxvt.colorIT:                       #b291af
-URxvt.colorBD:                       #6f6776
-URxvt.colorUL:                       #e9cfd3
+URxvt*termName:                 rxvt-256color
+URxvt.depth:                    32
+URxvt*lineSpace:                1
+URxvt.letterSpace:              -1
+URxvt.iso14755:                 false
+URxvt.iso14755_52:              false
+URxvt*geometry:                 65x17
+URxvt.scrollBar:                false
+URxvt*loginShell:               true
+URxvt.internalBorder:           25
+URxvt.perl-ext:	 		default,matcher
+URxvt.url-launcher:             google-chrome-stable
+URxvt.matcher.button: 		1
 
-!--------------------------------------------
-! General Colors
+! special
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
 
-*background:    #0f0a13
-*foreground:    #9aa8a9
-*.cursorColor:  #4a3139
+! black
+*.color0:       #282a2e
+*.color8:       #373b41
 
-! Black
-*color0: #1c0c18
-*color8: #1a1e31
-! Red
-*color1: #873e54
-*color9: #bc3962
-! Green
-*color2: #2a5b6f
-*color10: #67808c
-! Yellow
-*color3: #d83746
-*color11: #fc5d7f
-! Blue
-*color4: #3e3a4d
-*color12: #685589
-! Magenta
-*color5:  #422138
-*color13: #8b4779
-! Cyan
-*color6: #164569
-*color14: #38718d
-! White
-*color7:  #d4b9d7
-*color15: #fbdeff
+! red
+*.color1:       #a54242
+*.color9:       #cc6666
 
+! green
+*.color2:       #8c9440
+*.color10:      #b5bd68
 
-!-------------------------------------------
-! Man pages colors
+! yellow
+*.color3:       #de935f
+*.color11:      #f0c674
 
-*VT100.colorBDMode:                  true
-*VT100.colorBD:                      red
-*VT100.colorULMode:                  true
-*VT100.colorUL:                      cyan   
-*VT100.veryBoldColors:               6
+! blue
+*.color4:       #5f819d
+*.color12:      #81a2be
 
-!-------------------------------------------
-! xclock
+! magenta
+*.color5:       #85678f
+*.color13:      #b294bb
 
-xclock*majorColor:                  #9a875f
-xclock*minorColor:                  #9a875f
-xclock*minuteColor:                 #9a875f
-xclock*hourColor:                   #9a875f
-xclock*secondColor:                 #9a875f
+! cyan
+*.color6:       #5e8d87
+*.color14:      #8abeb7
 
-!-------------------------------------------
-! rofi
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6
 
-rofi.lines:                         6
-rofi.color-enabled:                 true
-rofi.separator-style:               none 
-rofi.width:                         40
-! rofi state:                          'bg'     'fg'     'bgalt'     'hlbg'    'hlfg'
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+
+! Use extended color scheme
+rofi.color-enabled:                  true
 ! Color scheme for normal row
-rofi.color-normal:                  argb:00000000, #8b4779, argb:00000000, #16101b,#ffffff
+rofi.color-normal:                   argb:00000000, #1aa, argb:11FFFFFF, #1aa,#333
 ! Color scheme for urgent row
-rofi.color-urgent:                  argb:00000000, #8b4779, argb:00000000, #16101b,#ffffff
+rofi.color-urgent:                   argb:00000000, #f99, argb:11FFFFFF, #f99,#333
 ! Color scheme for active row
-rofi.color-active:                  argb:00000000, #8b4779, argb:00000000, #16101b,#ffffff
+rofi.color-active:                   argb:00000000, #aa1, argb:11FFFFFF, #aa1,#333
 ! Color scheme window
-rofi.color-window:                  argb:ee0f0a13, #000,#fbdeff
+rofi.color-window:                   argb:ee333333, #1aa,#1aa
+! Separator style (none, dash, solid)
+rofi.separator-style:                dash

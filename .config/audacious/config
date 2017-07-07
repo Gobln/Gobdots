@@ -11,7 +11,9 @@ text_fonts_color_0=20156,61576,11788,65535
 text_fonts_name_0=Sawasdee Bold 14
 
 [audacious]
+enable_replay_gain=FALSE
 filepopup_delay=2
+soft_clipping=TRUE
 
 [audgui]
 about_win=390,183,582,362
@@ -20,6 +22,11 @@ filesel_path=/home/goblin/Music/Music/New for '17 trip
 info_win=393,206,579,355
 playlist_export_win=263,69,852,630
 playlist_path=file:///media/goblin/FreeAgent%20GoFlex%20Drive
+url_opener_win=489,297,384,129
+
+[crossfade]
+length=1
+manual_length=0.8
 
 [globalHotkey]
 Hotkey_0_event=0
@@ -57,22 +64,22 @@ Hotkey_7_type=0
 NumHotkeys=8
 
 [gtkui]
-column_widths=10,493,224,48,288,175,10,100,39,75,275,275,275,10
-player_height=768
-player_width=1366
-player_x=0
-player_y=0
+column_widths=10,293,224,48,288,175,10,100,39,68,275,275,275,10
+player_height=708
+player_width=965
+player_x=6
+player_y=27
 playlist_columns=artist album title queued length year genre
 
 [gtkui-layout]
 item0_name=Search Tool
-item0_pos=0,-1,-1,205,671
+item0_pos=0,-1,-1,205,618
 item1_name=Album Art
-item1_pos=-1,-22,47,1065,614
+item1_pos=-1,983,27,371,704
 item2_name=LyricWiki Plugin
-item2_pos=-1,1011,24,284,188
+item2_pos=-1,1189,27,165,704
 item3_name=Playlist Manager
-item3_pos=-1,0,0,284,188
+item3_pos=-1,688,6,666,725
 item_count=4
 
 [search-tool]
